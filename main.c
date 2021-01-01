@@ -17,17 +17,12 @@
 
 void __decode_4char(char *e, char *d);
 
-// num_of_char : number of original characters
-// e_string : encoded string
+
 int decode(char *e_string, int e_len)
 {
     int n_ori_char = (int)e_string[0] - ASCII_LEN_BASE;
     char *s_decoded;
     int i = 0, j = 0;
-
-#if 0
-    printf("n_ori_char:%d\n", n_ori_char);
-#endif
 
     s_decoded = (char *)malloc(n_ori_char + 1); // need add '\0' in the tail ?
     if (!s_decoded)
@@ -37,9 +32,6 @@ int decode(char *e_string, int e_len)
         __decode_4char(&e_string[1 + i], &s_decoded[j]);
     }
 
-#if 0
-    printf("\n\n\n");
-#endif
     free(s_decoded);
 
     return 0;
@@ -62,11 +54,8 @@ void __decode_4char(char *e, char *d)
 
 
 
-
-
 int main(int argc, const char *argv[])
 {
-    FILE *fp;
     char *line = NULL;
     size_t len = 0;
     ssize_t read;
@@ -82,7 +71,6 @@ int main(int argc, const char *argv[])
         decode(line, read);
     }
     free(line);
-
 
     return 0;
 }
