@@ -1,8 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define EXTRA_CHAR  '\0'
-#define ENCODE_CHAR  '0'
+#define EXTRA_CHAR_LAST_YEAR  '\0'
+#define EXTRA_CHAR_THIS_YEAR  ' '
+
+#define ENCODE_CHAR_LAST_YEAR  '0'
+#define ENCODE_CHAR_THIS_YEAR  ' '
+
+#define EXTRA_CHAR       EXTRA_CHAR_LAST_YEAR
+#define ENCODE_CHAR      ENCODE_CHAR_LAST_YEAR
+
 #define ASCII_LEN_BASE  '0'
 #define MAX_LEN_EACH_ENCODE   4
 #define MAX_LEN_EACH_DECODE   3
