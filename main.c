@@ -1,16 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define EXTRA_CHAR_LAST_YEAR  '\0'
-#define EXTRA_CHAR_THIS_YEAR  ' '
-
-#define ENCODE_CHAR_LAST_YEAR  '0'
-#define ENCODE_CHAR_THIS_YEAR  ' '
 
 // FIXME: need to change to _THIS_YEAR with test case of this year.
-#define EXTRA_CHAR       EXTRA_CHAR_LAST_YEAR
-#define ENCODE_CHAR      ENCODE_CHAR_LAST_YEAR
-
+#define EXTRA_CHAR ' '
+#define ENCODE_CHAR ' '
 #define ASCII_LEN_BASE  '0'
 #define MAX_LEN_EACH_ENCODE   4
 #define MAX_LEN_EACH_DECODE   3
